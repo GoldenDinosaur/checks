@@ -1,0 +1,29 @@
+// Allows user to determine the height of a right-
+// aligned pyramid through an input.
+
+#include <cs50.h>
+#include <stdio.h>
+
+// Requests user input for pyrmid height
+int main(void)
+{
+    int n;
+    do
+{
+    n = get_int("Height: ");
+}
+// The condition in which # rows (height) will print
+    while (n > 8 || n < 1);
+ // Checks the relation of row (i) to and increases by 1 when true
+    for (int i = 0; i < n; i++)
+{
+// As long as j is less than height less 1 and total row a space will print left to right
+        for (int j = 0; j < n - 1 - i; j++)
+            printf(" ");
+// as long as j is less than width + 1 print a hashtag        
+            for (int j = 0; j < i + 1; j++)
+                printf("#");
+        
+                printf("\n");
+}
+}
